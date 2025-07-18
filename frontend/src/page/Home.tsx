@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import LandingPage from "../ui/LandingPage"
 interface ConversionResponse {
   message: string;
   file: string;
@@ -102,23 +102,9 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div style={{
-      minHeight: "100vh",
-      background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      padding: "20px",
-      fontFamily: "Arial, sans-serif"
-    }}>
-      <div style={{
-        background: "white",
-        padding: "30px",
-        borderRadius: "10px",
-        maxWidth: "500px",
-        width: "100%",
-        boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)"
-      }}>
+    <div>
+      <LandingPage/>
+      <div>
         <h1 style={{ textAlign: "center", marginBottom: "20px", color: "#4a5568" }}>
           Image Converter
         </h1>
@@ -126,7 +112,7 @@ const Home: React.FC = () => {
         <div style={{ marginBottom: "20px" }}>
           <input
             type="file"
-            accept="image/*"
+            accept="image/*,video/*"
             onChange={handleFileChange}
             style={{
               width: "100%",

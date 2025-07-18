@@ -1,1 +1,93 @@
 @import "tailwindcss";
+
+:root{
+    --background-color:  hsl(222.2, 84%, 4.9%);
+    --text-color: rgba(255, 255, 255, 0.834);
+    --hover-color: white;
+    
+}
+
+body{
+    background-color: var(--background-color);
+    color: var(--text-color);
+     /* font-family: 'Inter', 'Segoe UI', Arial, sans-serif; */
+     font-family: "Noto Sans JP", sans-serif;
+}
+.hover-white:hover {
+    color: var(--hover-color);
+    transition: color 0.3s ease;
+}
+
+
+.font-custom{
+    font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+}
+/* Grid Animation Styles - Add to index.css */
+
+/* Grid Animation Styles - Add to index.css */
+
+@keyframes grid-move {
+  0% { 
+    transform: translateX(0) translateY(0); 
+  }
+  100% { 
+    transform: translateX(var(--cell-size)) translateY(var(--cell-size)); 
+  }
+}
+
+.animate-grid {
+  animation: grid-move 2s linear infinite;
+}
+
+/* @keyframes grid-pulse {
+  0%, 100% { 
+    opacity: 0.2; 
+  }
+  50% { 
+    opacity: 0.5; 
+  }
+} */
+
+.grid-pulse {
+  animation: grid-pulse 2s ease-in-out infinite;
+}
+
+/* Make grid subtle and add background */
+/* .grid-visible {
+  --light-line: rgba(255, 255, 255, 0.15) !important;
+  --dark-line: rgba(255, 255, 255, 0.1) !important;
+  --opacity: 0.4 !important;
+  background: linear-gradient(135deg, 
+  rgba(211, 209, 214, 0.03) 0%, 
+    rgba(59, 130, 246, 0.02) 50%, 
+    rgba(213, 220, 218, 0.03) 100%
+  );  
+} */
+
+/* Additional smooth animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Glow effect for buttons */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(139, 92, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
+  }
+}
+
+.glow-effect {
+  animation: glow 2s ease-in-out infinite;
+}
