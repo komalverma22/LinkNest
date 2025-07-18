@@ -4,7 +4,7 @@
     --background-color:  hsl(222.2, 84%, 4.9%);
     --text-color: rgba(255, 255, 255, 0.834);
     --hover-color: white;
-    
+    --secondary-color: rgb(106, 143, 203);
 }
 
 body{

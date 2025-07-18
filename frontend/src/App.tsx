@@ -3,19 +3,22 @@ import {  Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './page/Home'
 import Upload from './components/Uploader'
-import SecureUpload from './components/SecureUpload'
+
+import ScrollToTop from './ScrollToTop';
 
 function App() {
   return (
-   
+    <>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path='convert' element={<Home />} />
+          <Route index element={<Home />} />
+          <Route path='/home' element={<Home />} />
           <Route path="upload" element={<Upload />} />
-          <Route path="secure-upload" element={<SecureUpload />} />
+          
         </Route>
       </Routes>
-  
+    </>
   )
 }
 
